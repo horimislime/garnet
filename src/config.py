@@ -13,7 +13,6 @@ class GitConfig(object):
         try:
             config = GitConfigParser(open(path))
             self.base_url = config.get_value('garnet', 'apiurl')
-            self.redmine_project_no = config.get_value('garnet', 'projectno')
 
         except:
             raise '[ERROR] error in .gitconfig'
